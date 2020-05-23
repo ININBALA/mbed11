@@ -19,7 +19,7 @@ print("Enter AT mode.")
 print(char.decode())
 
 
-s.write("ATMY <BASE_MY>\r\n".encode())
+s.write("ATMY 0x140\r\n".encode())
 
 char = s.read(3)
 
@@ -28,7 +28,7 @@ print("Set MY <BASE_MY>.")
 print(char.decode())
 
 
-s.write("ATDL <BASE_DL>\r\n".encode())
+s.write("ATDL 0x240\r\n".encode())
 
 char = s.read(3)
 
@@ -37,7 +37,7 @@ print("Set DL <BASE_DL>.")
 print(char.decode())
 
 
-s.write("ATID <PAN_ID>\r\n".encode())
+s.write("ATID 0x1\r\n".encode())
 
 char = s.read(3)
 
